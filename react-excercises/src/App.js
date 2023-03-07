@@ -7,6 +7,7 @@ function App() {
 
   const [elements, setElements] = useState ([]);
   const [foundElements, setFoundElements] = useState ([]);
+  const [count, setCount] = useState (0);
   
 
   useEffect ( () => {
