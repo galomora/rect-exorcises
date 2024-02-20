@@ -1,0 +1,36 @@
+.button-wrapper {
+    display: flex;
+    gap: 1rem;
+
+    
+}
+
+.button-wrapper > * {
+    border: none;
+    background-color: azure;
+    font-weight: bold;
+    font-size: 2rem;
+    color: inherit;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out,
+        transform 50ms ease-in-out;
+    box-shadow: 0p 0px 10px $clr-gray200;
+    
+    
+}
+
+.button-wrapper:active > *  {
+    transform: scale(0.9);
+}
+
+.button-wrapper:hover > *  {
+    background-color: $clr-gray200;
+}
+
+.negative {}
+.positive {}
+
+

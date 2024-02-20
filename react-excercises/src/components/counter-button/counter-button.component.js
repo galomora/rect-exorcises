@@ -1,13 +1,21 @@
-const addCounter = (count, setCount) => {
-    setCount (count + 1);
-}
+import './counter-button.css';
 
-const dimCounter = (count, setCount) => {
-    setCount (count - 1);
-}
+const CounterButton = ({count, setCount}) => {
+    const addCounter = () => {
+        setCount (count + 1);
+    }
+    
+    const dimCounter = () => {
+        setCount (count - 1);
+    }
 
-const CounterButton = (count, setCount) => {
-
+    return (
+        <div className="button-wrapper">
+        <button onClick={dimCounter}>-</button>
+        <div>{count}</div>
+        <button onClick={addCounter}>+</button>
+        </div>
+    );
 }
 
 export default CounterButton;

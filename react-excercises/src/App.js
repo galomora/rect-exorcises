@@ -1,26 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useState, useEffect } from 'react';
-import SearchBar from './components/search-bar/search-bar.component';
+import Home from './routes/home/home.route';
+import { Route, Routes } from 'react-router-dom';
+import SearchBarRoute from './routes/exercises/search.bar.route';
+import CounterButtonRoute from './routes/exercises/counter.button.route';
+import ListRoute from './routes/exercises/list.of.elements.route';
 
 function App() {
 
-  const [elements, setElements] = useState ([]);
-  const [foundElements, setFoundElements] = useState ([]);
-  
-
-  useEffect ( () => {
-    console.log ("loading elements");
-    const elementList = ['Quito', 'Guayaquil', 'New York', 'Paris'];
-    setElements (elementList);
-    setFoundElements (elementList);
-  }, []);
-
   return (
-    <div className="App">
-      
-      <SearchBar elements={elements} setElements={setElements} foundElements={foundElements} setFoundElements={setFoundElements} />
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} >
+        <Route path='search-bar' element={<SearchBarRoute />} ></Route> 
+        <Route path='counter-button' element={<CounterButtonRoute />} ></Route> 
+        <Route path='list' element={<ListRoute />} ></Route> 
+      </Route> 
+    </Routes>
   );
 }
 
