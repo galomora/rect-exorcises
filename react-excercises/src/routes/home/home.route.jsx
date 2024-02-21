@@ -16,6 +16,9 @@ const Home = () => {
         <li>
           <Link to="/list">List of elements</Link>
         </li>
+        <li>
+          <Link to="/countdown">Countdown</Link>
+        </li>
       </ul>
       <Outlet />
     </div>

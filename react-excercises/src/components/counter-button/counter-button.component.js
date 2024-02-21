@@ -2,11 +2,11 @@ import './counter-button.css';
 
 const CounterButton = ({count, setCount}) => {
     const addCounter = () => {
-        setCount (count + 1);
+        setCount ((count) => (count + 1));
     }
     
     const dimCounter = () => {
-        setCount (count - 1);
+        setCount ((count) => (count + 1));
     }
 
     return (
